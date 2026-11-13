@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bullet Recovery</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="game-shell">
+      <canvas id="gameCanvas" width="1280" height="720"></canvas>
+
+      <div id="hud">
+        <div class="panel">
+          <span>HP</span>
+          <strong id="hpValue">100</strong>
+        </div>
+        <div class="panel">
+          <span>AMMO</span>
+          <strong id="ammoValue">1</strong>
+        </div>
+        <div class="panel">
+          <span>ENEMIES</span>
+          <strong id="enemyValue">0</strong>
+        </div>
+      </div>
+
+      <div id="messageBox" aria-live="polite"></div>
+
+      <div id="crosshair" aria-hidden="true">
+        <span class="line horizontal"></span>
+        <span class="line vertical"></span>
+      </div>
+
+      <div id="touchControls" aria-label="Touch controls">
+        <button data-key="KeyW">W</button>
+        <button data-key="KeyA">A</button>
+        <button data-key="KeyS">S</button>
+        <button data-key="KeyD">D</button>
+        <button data-key="Space">FIRE</button>
+        <button data-key="KeyE">PICK</button>
+      </div>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
