@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101a23" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23111d25'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia' font-size='46' fill='%23ceb87e'%3ES%3C/text%3E%3C/svg%3E" />
+  <title>Statecraft — Rise of a Nation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="Statecraft home"><span class="brand-mark">S</span><span>STATECRAFT<small>THE PRESIDENCY</small></span></a>
+      <div class="country-switch"><span class="flag">🇮🇩</span><span><b>Republic of Nusantara</b><small>DEVELOPING DEMOCRACY</small></span><span class="chevron">⌄</span></div>
+      <div class="side-label">EXECUTIVE OFFICE</div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-item active" data-view="overview"><span class="nav-icon">◫</span>Situation room</button>
+        <button class="nav-item" data-view="economy"><span class="nav-icon">▤</span>Economy<span class="nav-tag">3</span></button>
+        <button class="nav-item" data-view="government"><span class="nav-icon">♙</span>Government</button>
+        <button class="nav-item" data-view="defense"><span class="nav-icon">⬡</span>Defense</button>
+        <button class="nav-item" data-view="diplomacy"><span class="nav-icon">◎</span>Diplomacy</button>
+        <button class="nav-item" data-view="research"><span class="nav-icon">⌘</span>Research</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="brief-card"><span class="brief-icon">✳</span><div><b>Presidential briefing</b><small>3 items need your attention</small></div><span class="brief-count">3</span></div>
+        <div class="user-row"><div class="avatar">AP</div><div><b>Amara Prasetyo</b><small>President · Year 2 of 4</small></div><button class="more-btn" aria-label="Profile options">···</button></div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar"><div class="breadcrumb"><span>EXECUTIVE OFFICE</span><i>/</i><b id="crumbTitle">Situation room</b></div><div class="top-actions"><div class="live-indicator"><span></span> LIVE SIMULATION</div><button class="icon-button" aria-label="Notifications" id="notificationsBtn">♧<i class="notification-dot"></i></button><button class="advance-btn" id="advanceBtn"><span>Advance month</span><span class="advance-arrow">→</span></button></div></header>
+      <div class="page-wrap">
+        <section class="page-heading"><div><div class="eyebrow" id="dateLabel">MONDAY, 01 JANUARY 2028 <span>·</span> JAKARTA</div><h1 id="pageTitle">Good morning, President.</h1><p id="pageSubtitle">The nation is stable. Your next decision will shape its future.</p></div><div class="heading-right"><span class="weather">☀ <b>29°</b> Jakarta</span><button class="outline-btn" id="briefingBtn">↗ &nbsp;Daily briefing</button></div></section>
+        <div class="notice-banner" id="noticeBanner"><span class="notice-symbol">!</span><div><b>Cabinet meeting in 2 days</b><small>Three proposals are awaiting your approval. Set the agenda before the session.</small></div><button class="banner-action" data-action="open-government">Review agenda <span>→</span></button><button class="dismiss" id="dismissNotice" aria-label="Dismiss">×</button></div>
+
+        <section class="kpi-grid" aria-label="National indicators">
+          <article class="kpi-card"><div class="kpi-label">GDP <span class="info">ⓘ</span></div><div class="kpi-value" id="gdpValue">$412.8<span class="unit">B</span></div><div class="kpi-foot"><span class="trend positive">↗ 4.2%</span><span>year over year</span></div><div class="sparkline" data-color="green"><svg viewBox="0 0 100 32" preserveAspectRatio="none"><path d="M0 26 C10 24 11 19 22 21 S35 24 42 17 S54 20 61 14 S73 18 80 10 S91 13 100 4"/></svg></div></article>
+          <article class="kpi-card"><div class="kpi-label">PUBLIC APPROVAL <span class="info">ⓘ</span></div><div class="kpi-value" id="approvalValue">64<span class="unit">%</span></div><div class="kpi-foot"><span class="trend positive" id="approvalTrend">↗ 2 pts</span><span>since last quarter</span></div><div class="sparkline" data-color="blue"><svg viewBox="0 0 100 32" preserveAspectRatio="none"><path d="M0 23 C9 21 15 25 22 18 S34 20 40 14 S52 19 60 12 S73 16 79 9 S92 13 100 5"/></svg></div></article>
+          <article class="kpi-card"><div class="kpi-label">INFLATION <span class="info">ⓘ</span></div><div class="kpi-value" id="inflationValue">3.1<span class="unit">%</span></div><div class="kpi-foot"><span class="trend positive" id="inflationTrend">↘ 0.4 pts</span><span>within target range</span></div><div class="sparkline" data-color="gold"><svg viewBox="0 0 100 32" preserveAspectRatio="none"><path d="M0 8 C9 6 13 13 21 10 S32 14 40 12 S52 21 60 16 S72 23 80 19 S90 24 100 22"/></svg></div></article>
+          <article class="kpi-card"><div class="kpi-label">NATIONAL TREASURY <span class="info">ⓘ</span></div><div class="kpi-value" id="treasuryValue">$18.6<span class="unit">B</span></div><div class="kpi-foot"><span class="trend neutral" id="budgetTrend">Balanced outlook</span><span>monthly balance</span></div><div class="sparkline" data-color="violet"><svg viewBox="0 0 100 32" preserveAspectRatio="none"><path d="M0 18 C10 22 15 16 22 18 S34 13 42 17 S51 9 60 14 S72 11 80 14 S92 8 100 10"/></svg></div></article>
+        </section>
+
+        <section class="dashboard-grid" id="overviewView">
+          <article class="panel map-panel"><div class="panel-heading"><div><div class="eyebrow">GEOPOLITICAL OVERVIEW</div><h2>Regional outlook</h2></div><div class="map-controls"><button class="map-filter active" data-map-filter="influence">Influence</button><button class="map-filter" data-map-filter="trade">Trade</button><button class="map-filter" data-map-filter="security">Security</button><button class="expand-map" aria-label="Expand map">⛶</button></div></div>
+            <div class="map-wrap"><svg id="worldMap" viewBox="0 0 760 340" role="img" aria-label="Strategic world map showing diplomatic partners"><defs><pattern id="mapGrid" width="38" height="38" patternUnits="userSpaceOnUse"><path d="M 38 0 L 0 0 0 38" fill="none" stroke="#213340" stroke-width=".6" opacity=".55"/></pattern><radialGradient id="mapGlow"><stop offset="0" stop-color="#b39b66" stop-opacity=".16"/><stop offset="1" stop-color="#b39b66" stop-opacity="0"/></radialGradient></defs><rect width="760" height="340" fill="url(#mapGrid)"/><ellipse cx="424" cy="183" rx="172" ry="125" fill="url(#mapGlow)"/>
+              <g class="landmass" fill="#263a43" stroke="#334c54" stroke-width="1.1"><path d="M84 73l20-13 34 3 19 14 28 3 9 13-15 12-6 16-14 3-9 24-17 11-2 17-13 7-11-18-8-28-15-9-5-24-17-12 4-13-8-9z"/><path d="M178 171l21 8 13 20-5 22 9 16-8 31-15 27-9 31-14-14-5-31-13-22 4-28-10-18 10-17-2-16z"/><path d="M329 75l24-14 46 2 17 10 38-2 25 12 30-7 32 12 15 15-12 10-28-4-15 11-20-4-8 15-22 6-7 17-19 2-13-14-20-5-4-19-21-3-7-13-29-2-14-11-22 2-10-7z"/><path d="M350 155l18 1 11 15 17 4 13 21-4 22-12 15-5 35-17 19-17-4-13-28-1-24-12-17 6-20-8-15z"/><path d="M492 179l19-9 18 5 10 15-8 11-23 4-17-10z"/><path d="M556 192l25-9 35 6 26 15 28 5 12 16-12 12-25-3-11 13-19-4-11-15-20 1-13-12-22 2-9-14z"/><path d="M624 269l23-7 17 9-5 16-22 8-18-9z"/><path d="M280 117l8-5 9 5-2 12-9 4-8-7z"/><path d="M695 131l9-4 8 6-3 9-10 2-6-5z"/></g>
+              <g class="map-labels"><text x="115" y="137">NORTH AMERICA</text><text x="177" y="254">SOUTH AMERICA</text><text x="389" y="123">EUROPE</text><text x="375" y="216">AFRICA</text><text x="578" y="151">ASIA PACIFIC</text><text x="614" y="274">OCEANIA</text></g>
+              <g class="routes" id="tradeRoutes"><path d="M440 151 Q485 105 552 147"/><path d="M446 157 Q492 181 559 201"/><path d="M448 152 Q405 128 375 135"/><path d="M452 159 Q473 193 501 196"/></g>
+              <g class="country-point" tabindex="0" role="button" aria-label="United States, strategic partner" data-country="United States" data-detail="GDP $27.4T · Strategic partner · Influence 78"><circle cx="145" cy="116" r="11"/><circle class="point-core" cx="145" cy="116" r="3.5"/><text x="160" y="113">USA</text></g>
+              <g class="country-point" tabindex="0" role="button" aria-label="European Union, trade partner" data-country="European Union" data-detail="GDP $18.6T · Trade partner · Influence 67"><circle cx="400" cy="134" r="9"/><circle class="point-core" cx="400" cy="134" r="3"/><text x="411" y="131">EU</text></g>
+              <g class="country-point" tabindex="0" role="button" aria-label="China, major power" data-country="China" data-detail="GDP $17.8T · Major power · Influence 72"><circle cx="558" cy="151" r="11"/><circle class="point-core" cx="558" cy="151" r="3.5"/><text x="573" y="148">CHN</text></g>
+              <g class="country-point" tabindex="0" role="button" aria-label="India, emerging partner" data-country="India" data-detail="GDP $3.7T · Emerging partner · Influence 58"><circle cx="498" cy="193" r="8"/><circle class="point-core" cx="498" cy="193" r="3"/><text x="509" y="191">IND</text></g>
+              <g class="country-point home-point" tabindex="0" role="button" aria-label="Nusantara, your country" data-country="Nusantara" data-detail="Your nation · GDP $412.8B · Influence 34"><circle class="home-pulse" cx="561" cy="215" r="20"/><circle cx="561" cy="215" r="9"/><circle class="point-core" cx="561" cy="215" r="3"/><text x="574" y="229">NUSANTARA</text></g>
+              <g class="country-point" tabindex="0" role="button" aria-label="Australia, regional ally" data-country="Australia" data-detail="GDP $1.7T · Regional ally · Influence 52"><circle cx="624" cy="252" r="8"/><circle class="point-core" cx="624" cy="252" r="3"/><text x="636" y="249">AUS</text></g>
+              <g class="map-tooltip" id="mapTooltip"><rect width="205" height="47" rx="5"/><text class="tooltip-country" x="12" y="19"></text><text class="tooltip-detail" x="12" y="35"></text></g>
+            </svg><div class="map-legend"><span><i class="legend-dot home"></i>Your nation</span><span><i class="legend-dot partner"></i>Strategic partner</span><span><i class="legend-line"></i>Trade corridor</span></div><div class="map-scale">WORLD VIEW <span>·</span> 1 : 42M</div></div>
+            <div class="map-footer"><div><span class="region-icon">⌖</span><span><b>Indo-Pacific</b><small>4 active diplomatic channels</small></span></div><button class="text-action" data-view-link="diplomacy">Open diplomatic corps <span>→</span></button></div>
+          </article>
+          <article class="panel priorities-panel"><div class="panel-heading"><div><div class="eyebrow">THE PRESIDENT'S DESK</div><h2>National priorities</h2></div><button class="more-btn" id="prioritiesMenu" aria-label="More priorities">···</button></div><div class="priority-summary"><span class="priority-number">03</span><span><b>Active initiatives</b><small>One decision required today</small></span><span class="summary-status"><i></i>ON TRACK</span></div><div class="priority-list" id="priorityList"></div><button class="add-priority" id="addPriority">＋ &nbsp;Set a new priority</button></article>
+        </section>
+
+        <section class="lower-grid" id="overviewLower"><article class="panel economy-panel"><div class="panel-heading"><div><div class="eyebrow">ECONOMIC PERFORMANCE</div><h2>Growth is holding steady</h2></div><button class="select-button" id="chartPeriod">Last 12 months <span>⌄</span></button></div><div class="chart-summary"><div><span class="chart-big" id="growthValue">4.2%</span><span class="trend positive">↗ 0.8%</span></div><span class="chart-caption">Quarterly real GDP growth</span></div><div class="chart-area"><div class="y-axis"><span>6%</span><span>4%</span><span>2%</span><span>0%</span></div><svg viewBox="0 0 640 150" preserveAspectRatio="none" class="economy-chart" aria-label="GDP growth chart"><defs><linearGradient id="areaFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#d2b776" stop-opacity=".19"/><stop offset="1" stop-color="#d2b776" stop-opacity="0"/></linearGradient></defs><path class="chart-area-fill" d="M0 106 C32 101 40 84 80 90 S126 77 160 84 S197 61 240 72 S284 49 320 60 S362 44 400 52 S442 37 480 48 S526 27 560 34 S607 18 640 25 L640 150 L0 150Z"/><path class="chart-line" d="M0 106 C32 101 40 84 80 90 S126 77 160 84 S197 61 240 72 S284 49 320 60 S362 44 400 52 S442 37 480 48 S526 27 560 34 S607 18 640 25"/><circle cx="640" cy="25" r="4" class="chart-endpoint"/></svg><div class="x-axis"><span>JAN</span><span>MAR</span><span>MAY</span><span>JUL</span><span>SEP</span><span>NOV</span></div></div><div class="economy-footer"><span><i class="chart-key"></i>Real GDP growth</span><span>Source: National Statistics Bureau</span><button class="text-action" data-view-link="economy">Full economic report <span>→</span></button></div></article>
+          <article class="panel agenda-panel"><div class="panel-heading"><div><div class="eyebrow">INCOMING SIGNALS</div><h2>On the agenda</h2></div><span class="agenda-date">JAN 01</span></div><div class="agenda-list" id="agendaList"></div><button class="agenda-all" id="allBriefings">View all briefings <span>→</span></button></article></section>
+
+        <section class="panel activity-panel"><div class="panel-heading"><div><div class="eyebrow">EXECUTIVE RECORD</div><h2>Recent decisions</h2></div><button class="text-action" id="allActivity">Full record <span>→</span></button></div><div class="activity-table"><div class="activity-head"><span>DECISION</span><span>PORTFOLIO</span><span>DATE</span><span>PUBLIC RESPONSE</span></div><div id="activityRows"></div></div></section>
+        <section class="subpage" id="subpage" hidden></section>
+        <footer class="page-footer"><span>STATECRAFT <i>·</i> PRESIDENTIAL SIMULATION</span><span>SIMULATION PAUSED <i class="footer-dot"></i></span></footer>
+      </div>
+    </main>
+  </div>
+  <div class="toast-region" id="toastRegion" aria-live="polite"></div>
+  <div class="modal-backdrop" id="modalBackdrop" hidden><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" id="modalClose" aria-label="Close">×</button><div class="eyebrow" id="modalEyebrow">PRESIDENTIAL BRIEFING</div><h2 id="modalTitle">Daily briefing</h2><div class="modal-content" id="modalContent"></div><button class="primary-button" id="modalConfirm">Understood</button></div></div>
+  <script src="game.js"></script>
+</body>
+</html>
